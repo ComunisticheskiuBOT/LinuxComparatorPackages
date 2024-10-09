@@ -11,7 +11,7 @@ LinuxComparatorPackages is a utility for comparing binary packages between branc
  On ALT Linux, install the necessary dependencies:
 
 <code>sudo apt-get update</code>
-<code>sudo apt-get install -y cmake gcc g++ make librpm librpm-dev openjdk-11-jdk maven</code>
+<code>sudo apt-get install -y cmake gcc g++ make librpm librpm-devel openjdk-11-jdk maven</code>
 
 
 ## Cloning a repository:
