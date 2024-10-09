@@ -19,6 +19,17 @@ LinuxComparatorPackages is a utility for comparing binary packages between branc
 <code>git clone https://github.com/ComunisticheskiuBOT/LinuxComparatorPackages.git</code>
 <code>cd LinuxComparatorPackages</code>
 
+## Set up variables in CMakeLists.txt:
+
+Open it CMakeLists.txt and edit the following lines:
+Make sure that the specified path to JAVA_HOME corresponds to your installed JDK:
+
+<code>set(JAVA_HOME "/path/to/your/jdk")</code>
+
+Make sure that the ORG_EXAMPLE_RPM_VERSION_COMPARATOR variable points to the correct path to your Java package:
+
+<code>set(ORG_EXAMPLE_RPM_VERSION_COMPARATOR "path/to/project")</code>
+
 ## Building a native library:
 
 Go to the src directory and run the following commands:
