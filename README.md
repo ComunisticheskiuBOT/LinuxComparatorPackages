@@ -11,7 +11,7 @@ Content
  On ALT Linux, install the necessary dependencies:
 
 <code>sudo apt-get update</code>
-<code>sudo apt-get install -y cmake gcc g++ make librpm librpm-dev openjdk-11-jdk</code>
+<code>sudo apt-get install -y cmake gcc g++ make librpm librpm-dev openjdk-11-jdk maven</code>
 
 
 ## Cloning a repository:
@@ -21,14 +21,18 @@ Content
 
 ## Building a native library:
 
-Go to the src/native directory and run the following commands:
+Go to the src directory and run the following commands:
 
+<code>mkdir -p native</code>
 <code>mkdir -p build</code>
 <code>cd build</code>
 <code>cmake ..</code>
 <code>make</code>
 
 This will create a file libLinuxComparatorPackages.so in the build folder.
+Transfer the collected library .so to the standard directory for ALT Linux dynamic libraries:
+
+<code>sudo cp {ALL_WAY}/build/libLinuxComparatorPackages.so /usr/lib/</code>
 
 ## FAT JAR Assembly:
 
@@ -36,13 +40,10 @@ Go to the root directory of the project and build the FAT JAR using the command:
 
 <code>mvn clean package</code>
 
-This will create a JAR file build/libs/LinuxComparatorPackages-1.0.jar .
+This will create a JAR file target/LinuxComparatorPackages-1.0.jar .
+Transfer the collected library to the standard directory for ALT Linux libraries:
 
-## Installing the library:
-
-Transfer the collected library .so to the standard directory for ALT Linux dynamic libraries:
-
-<code>sudo cp {ALL_WAY}/build/libs/libLinuxComparatorPackages.so /usr/lib/</code>
+<code>sudo cp {ALL_WAY}/target/LinuxComparatorPackages-1.0.jar /usr/lib/</code>
 
 ## Launch
 
