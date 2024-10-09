@@ -1,7 +1,7 @@
 # LinuxComparatorPackages
 
 LinuxComparatorPackages is a utility for comparing binary packages between branches from the public REST API of ALT Linux. The utility is written in Java and uses a native library to accurately compare package versions.
-Content
+
 
 ## Installation
 
